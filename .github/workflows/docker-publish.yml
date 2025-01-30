@@ -29,7 +29,7 @@ jobs:
         context: .
         push: true
         tags: |
-          ghcr.io/osmcha/osm-adiff-service:latest
-          ghcr.io/osmcha/osm-adiff-service:${{ github.sha }}
+          ghcr.io/openhistoricalmap/osm-adiff-service:latest
+          ghcr.io/openhistoricalmap/osm-adiff-service:${{ github.sha }}
         cache-from: type=gha
         cache-to: type=gha,mode=max

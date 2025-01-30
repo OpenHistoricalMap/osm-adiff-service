@@ -39,7 +39,7 @@ function prepareCSV(data) {
             editor[0] = {};
             editor[0]['v'] = 'no editor specified';
         }
-        console.log(f.metadata.id+ ',', Math.ceil(moment.duration(diff).asMinutes()) + ' minutes,', f.metadata.num_changes + ' edits,', f.metadata.user + ',', editor[0]['v'] + ',', `https://openstreetmap.org/changeset/${f.metadata.id}` );
+        console.log(f.metadata.id+ ',', Math.ceil(moment.duration(diff).asMinutes()) + ' minutes,', f.metadata.num_changes + ' edits,', f.metadata.user + ',', editor[0]['v'] + ',', `https://openhistoricalmap.org/changeset/${f.metadata.id}` );
     });
 }
 

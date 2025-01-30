@@ -29,7 +29,7 @@ function getStackInfo(stack) {
 }
 
 function getChangesetTimings(changeset) {
-    const changesetUrl = `https://www.openstreetmap.org/api/0.6/changeset/${changeset}`;
+    const changesetUrl = `https://www.openhistoricalmap.org/api/0.6/changeset/${changeset}`;
     return fetch(changesetUrl).then(body => body.text()).then(text => {
         const changesetData = parser.toJson(text, {
             arrayNotation: true,
