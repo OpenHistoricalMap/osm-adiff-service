@@ -49,7 +49,7 @@ const getPlanetTimestamp = async () => {
   const overpassDelay = await getOverpassDelay();
   const { Body } = await s3.getObject({
     Bucket: REPLICATION_BUCKET,
-    Key: 'planet/replication/minute/state.txt'
+    Key: 'replication/minute/state.txt'
   }).promise();
   const state = Body.toString();
   return parseSequenceNumber(state) - overpassDelay;

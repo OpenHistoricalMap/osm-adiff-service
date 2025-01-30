@@ -1,7 +1,6 @@
 const formatReplicationKey = (id) => {
   id = id.toString().padStart(9, '0');
   return [
-    'planet',
     'replication',
     'minute',
     id.slice(0, 3),
