@@ -90,7 +90,7 @@ function getXML(replicationId) {
         const pad = Array(9 - n.length + 1).join('0');
         n = pad + n;
     }
-    const url = `https://s3.amazonaws.com/osm-changesets/minute/${n.slice(0, 3)}/${n.slice(3, 6)}/${n.slice(6, 9)}.osc.gz`;
+    const url = `https://s3.amazonaws.com/planet.openhistoricalmap.org/replication/minute/${n.slice(0, 3)}/${n.slice(3, 6)}/${n.slice(6, 9)}.osc.gz`;
     return fetch(url).then(d => d.buffer()).then(d => pako.inflate(d, { to: 'string' }));
 }
 
